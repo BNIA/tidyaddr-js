@@ -1,0 +1,92 @@
+{
+  "ignore": [
+    "\\bnorth(?= ave\\b)",
+    "\\bnorth(?= av\\b)",
+    "\\bnorth(?= avenue\\b)",
+    "\\beast(?= ave\\b)",
+    "\\beast(?= av\\b)",
+    "\\beast(?= avenue\\b)"
+  ],
+  "sub": [
+    {
+      "match": "\\be\\b",
+      "replace": "east",
+      "opts": {"flags":"gi"}
+    },
+    {
+      "match": "\\beast\\b",
+      "replace": "east",
+      "opts": {"flags":"gi"}
+    },
+    {
+      "match": "\\bn\\b",
+      "replace": "north",
+      "opts": {"flags":"gi"}
+    },
+    {
+      "match": "\\bnorth\\b",
+      "replace": "north",
+      "opts": {"flags":"gi"}
+    },
+    {
+      "match": "\\bne\\b",
+      "replace": "northeast",
+      "opts": {"flags":"gi"}
+    },
+    {
+      "match": "\\bnortheast\\b",
+      "replace": "northeast",
+      "opts": {"flags":"gi"}
+    },
+    {
+      "match": "\\bnw\\b",
+      "replace": "northwest",
+      "opts": {"flags":"gi"}
+    },
+    {
+      "match": "\\bnorthwest\\b",
+      "replace": "northwest",
+      "opts": {"flags":"gi"}
+    },
+    {
+      "match": "\\bs\\b",
+      "replace": "south",
+      "opts": {"flags":"gi"}
+    },
+    {
+      "match": "\\bsouth\\b",
+      "replace": "south",
+      "opts": {"flags":"gi"}
+    },
+    {
+      "match": "\\bse\\b",
+      "replace": "southeast",
+      "opts": {"flags":"gi"}
+    },
+    {
+      "match": "\\bsoutheast\\b",
+      "replace": "southest",
+      "opts": {"flags":"gi"}
+    },
+    {
+      "match": "\\bsw\\b",
+      "replace": "southwest",
+      "opts": {"flags":"gi"}
+    },
+    {
+      "match": "\\bsouthwest\\b",
+      "replace": "southwest",
+      "opts": {"flags":"gi"}
+    },
+    {
+      "match": "\\bw\\b",
+      "replace": "west",
+      "opts": {"flags":"gi"}
+    },
+    {
+      "match": "\\bwest\\b",
+      "replace": "west",
+      "opts": {"flags":"gi"}
+    }
+  ]
+}

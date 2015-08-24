@@ -1,0 +1,9 @@
+{
+    "ignore":[],
+    "sub":[
+        {"match":"^[0-9]+\\b","replace":null,"opts": {"flags":"gi"}},
+        {"match":"^[0-9]+-[0-9]+\\b","replace":null,"opts": {"flags":"gi"}},
+        {"match":"^[0-9]+\\.5\\b","replace":null,"opts": {"flags":"gi"}},
+        {"match":"^[0-9]+[a-z]\\b","replace":null,"opts": {"flags":"gi"}}
+    ]
+}
