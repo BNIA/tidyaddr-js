@@ -5,8 +5,11 @@ var helpers = require('./helpers.js');
 
 exports.cleanLine = function(line){
   var results = {number:null,direction:null,name:null,suffix:null,unit:null,original:null,tidyaddress:null};
-  results.original = line;
 
+  results.original = line;
+  if (line === null){
+    return results;
+  }
   //suffix
   var sfxSubObjs = helpers.mapSub(line,subs.suffix.sub);
   var sfxIgnoreObjs = helpers.mapSub(line,subs.suffix.ignore);
