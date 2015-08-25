@@ -4,14 +4,14 @@
   ],
   "sub": [
     {
-      "match": "\\bthe alameda(\\b)",
+      "match": ["(?i)(?=\\bthe alameda\\b)","."],
       "replace": "",
-      "opts": {"flags":"gi"}
+      "opts": {"flags":"gi","lookbehind":true}
     },
     {
-      "match": "\\S+way(\\b)",
+      "match": ["(?i)(?=\\S+way)","\\b"],
       "replace": "",
-      "opts": {"flags":"gi"}
+      "opts": {"flags":"gi","lookbehind":true}
     },
     {
       "match": "\\bal\\b",

@@ -41,12 +41,29 @@ exports.matchReplace = function(str, matchRegEx, replaceStr) {
 
 exports.findAllSub = function(str,matchStr,replaceStr,opts){
     opts = _.assign({},{'flags':''},opts);
+
     var results = [];
-    var re = RegExp(matchStr,opts.flags); //TODO: maybe not ignore case... ohwell
+    var pos = 0;
     var match;
-    while((match = re.exec(str)) !== null){
-        var result = getSubObj(match,matchStr,replaceStr);
-        results.push(result);
+    if(opts.lookbehind){
+      var substr = str;
+      //not sure if correct
+      while((match = XRegExp.execLb(substr,matchStr[0],XRegExp(matchStr[1],opts.flags)))){
+          var oldpos = pos;
+          match.index+=1; //this is dumb
+          pos = pos + match.index + match[0].length;
+          substr = substr.substring(pos,str.length);
+          match.index = oldpos+match.index;
+          var result = getSubObj(match,matchStr,replaceStr);
+          results.push(result);
+      }
+    }
+    else{
+      while((match = XRegExp.exec(str,XRegExp(matchStr,opts.flags),pos))){
+          var result = getSubObj(match,matchStr,replaceStr);
+          pos = match.index + match[0].length;
+          results.push(result);
+      }
     }
     return results;
 };
