@@ -11,6 +11,7 @@ var getSubObj = function(match,matchStr,replaceStr){
     subObj.end = subObj.start + subObj.len;
     subObj.match = matchStr;
     subObj.replace = (replaceStr === undefined || replaceStr === null ? subObj.found : replaceStr);
+    if(subObj.replace === ''){subObj.replace = null}
     subObj.original = match.input;
     subObj.originalLen = subObj.original.length;
     subObj.subbed = (replaceStr === undefined || replaceStr === null ? subObj.original : replaceBetween(subObj.original,subObj.replace,subObj.start,subObj.end));
@@ -50,7 +51,7 @@ exports.findAllSub = function(str,matchStr,replaceStr,opts){
       //not sure if correct
       while((match = XRegExp.execLb(substr,matchStr[0],XRegExp(matchStr[1],opts.flags)))){
           var oldpos = pos;
-          match.index+=1; //this is dumb
+          //match.index+=1; //this is dumb
           pos = pos + match.index + match[0].length;
           substr = substr.substring(pos,str.length);
           match.index = oldpos+match.index;
@@ -155,14 +156,14 @@ exports.filterBetween = function(leftIndex,rightIndex,subObjs,leftInclusive,righ
   if(subObjs.length === 0 ){return subObjs;}
   var rightOf = exports.filterRighttOf(leftIndex,subObjs,leftInclusive);
   var leftOf = exports.filterLeftOf(rightIndex,subObjs,rightInclusive);
-  return _.union(rightOf,leftOf);
+  return _.intersection(rightOf,leftOf);
 };
 
 exports.filterOutside = function(leftIndex,rightIndex,subObjs,leftInclusive,rightInclusive){
   if(subObjs.length === 0 ){return subObjs;}
   var leftOf = exports.filterLeftOf(leftIndex,subObjs,leftInclusive);
   var rightOf = exports.filterRightOf(rightIndex,subObjs,rightInclusive);
-  return _.intersection(leftOf,rightOf);
+  return _.union(leftOf,rightOf);
 };
 
 exports.subObjLeftOfSubObj = function(subObj1,subObj2,inclusive){
@@ -179,12 +180,28 @@ exports.subObjRightOfSubObj = function(subObj1,subObj2,inclusive){
   return subObj1.start >= subObj2.end;
 };
 
-exports.subStringBetweenSubObjs = function(str,leftSubObj,rightSubObj){
-  return str.substring(leftSubObj.end+1,rightSubObj.start-1);
+exports.subStringBetweenSubObjs = function(str,leftSubObj,rightSubObj,leftInclusive,rightInclusive){
+  var leftIndex, rightIndex;
+  if(leftInclusive === undefined || leftInclusive === false){
+    leftIndex = leftSubObj.end+1;
+  }
+  else{
+    leftIndex = leftSubObj.end;
+  }
+  if(rightInclusive === undefined || rightInclusive === false){
+    rightIndex = rightSubObj.start-1;
+  }
+  else{
+    rightIndex = rightSubObj.start;
+  }
+  return str.substring(leftIndex,rightIndex);
 };
 
-exports.subStringRightOfSubObj = function(str,subObj){
-  return str.substring(subObj.end+1,str.length);
+exports.subStringRightOfSubObj = function(str,subObj,inclusive){
+  if(inclusive === undefined || inclusive === false){
+    return str.substring(subObj.end+1,str.length);
+  }
+  else return str.substring(subObj.end,str.length);
 };
 
 exports.subStringLeftOfSubObj = function(str,subObj){
@@ -207,4 +224,8 @@ exports.cleanConcat = function(strArr){
     return result;
   },'');
   return exports.stripString(concatted);
+}
+
+exports.removeHeadZeroes = function(str){
+  return str.replace(/^0*/,'');
 }

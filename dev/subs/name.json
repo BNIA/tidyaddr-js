@@ -1,4 +1,15 @@
 {
     "ignore":[],
-    "sub":[]
+    "sub":[
+      {
+        "match": "\\bthe alameda\\b",
+        "replace": "the alameda",
+        "opts": {"flags":"gi"}
+      },
+      {
+        "match": "\\bbroadway\\b",
+        "replace": "broadway",
+        "opts": {"flags":"gi"}
+      }
+    ]
 }

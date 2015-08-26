@@ -20,6 +20,12 @@ exports.cleanLine = function(line){
   var sfxSubObj = sfxSubObjs[0];
   results.suffix = sfxSubObj.replace;
 
+  var sfxLeftInclusive = false;
+  var sfxRightInclusive = false;
+  if(sfxSubObj.len === 0){
+    sfxRightInclusive = true;
+  }
+
   //number
   var numSubObjs = helpers.mapSub(line, subs.number.sub);
   numSubObjs = helpers.filterLeftmostLeftIndex(numSubObjs);
@@ -32,7 +38,7 @@ exports.cleanLine = function(line){
   var dirSubObjs = helpers.mapSub(line, subs.direction.sub);
   var dirIgnoreObjs = helpers.mapSub(line, subs.direction.ignore);
   dirSubObjs = helpers.removeIgnoredSubObjs(dirSubObjs, dirIgnoreObjs);
-  dirSubObjs = helpers.filterOutside(sfxSubObj.start,sfxSubObj.end,dirSubObjs);
+  dirSubObjs = helpers.filterOutside(sfxSubObj.start,sfxSubObj.end,dirSubObjs,false,sfxRightInclusive);
   dirSubObjs = helpers.filterLeftmostLeftIndex(dirSubObjs);
   dirSubObjs = helpers.filterLongest(dirSubObjs);
 
@@ -44,15 +50,15 @@ exports.cleanLine = function(line){
   var name = null;
   var unit = null;
   if(dirSubObj !== null && helpers.subObjLeftOfSubObj(dirSubObj,sfxSubObj)){
-    name = helpers.subStringBetweenSubObjs(line,dirSubObj,sfxSubObj);
+    name = helpers.subStringBetweenSubObjs(line,dirSubObj,sfxSubObj,sfxLeftInclusive,sfxRightInclusive);
     unit = helpers.subStringRightOfSubObj(line,sfxSubObj);
   }
   else if (dirSubObj !== null && helpers.subObjRightOfSubObj(dirSubObj,sfxSubObj)){
-    name = helpers.subStringBetweenSubObjs(line,numSubObj,sfxSubObj);
+    name = helpers.subStringBetweenSubObjs(line,numSubObj,sfxSubObj,sfxLeftInclusive,sfxRightInclusive);
     unit = helpers.subStringRightOfSubObj(line,dirSubObj);
   }
   else{
-    name = helpers.subStringBetweenSubObjs(line,numSubObj,sfxSubObj);
+    name = helpers.subStringBetweenSubObjs(line,numSubObj,sfxSubObj,sfxLeftInclusive,sfxRightInclusive);
     unit = helpers.subStringRightOfSubObj(line,sfxSubObj);
   }
   name = helpers.stripString(name);
@@ -71,4 +77,8 @@ exports.cleanLine = function(line){
   results.tidyaddress = tidyaddress;
   return results;
 
+};
+
+exports.cleanLot = function(str){
+  return helpers.removeHeadZeroes(str);
 };
