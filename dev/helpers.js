@@ -25,6 +25,10 @@ var replaceBetween = function(str,replaceStr,start,end){
     return left + replaceStr + right;
 };
 
+exports.whiteSpace = function(str){
+  return XRegExp.test(str,/^\s*$/);
+};
+
 exports.longestStr = function(strArr) {
 
 };

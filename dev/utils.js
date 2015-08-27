@@ -7,7 +7,7 @@ exports.cleanLine = function(line){
   var results = {number:null,direction:null,name:null,suffix:null,unit:null,original:null,tidyaddress:null};
 
   results.original = line;
-  if (line === null){
+  if (line === null || line === '' || helpers.whiteSpace(line)){
     return results;
   }
   //suffix
