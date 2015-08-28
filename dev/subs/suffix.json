@@ -1089,6 +1089,11 @@
       "opts": {"flags":"gi"}
     },
     {
+      "match": "\\bwalk\\b",
+      "replace": "walk",
+      "opts": {"flags":"gi"}
+    }
+    {
       "match": "\\bpth\\b",
       "replace": "path",
       "opts": {"flags":"gi"}
@@ -1121,6 +1126,11 @@
     {
       "match": "\\bgarth\\b",
       "replace": "garth",
+      "opts": {"flags":"gi"}
+    },
+    {
+      "match": "\\braod\\b",
+      "replace": "road",
       "opts": {"flags":"gi"}
     }
   ]
