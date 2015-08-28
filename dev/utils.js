@@ -7,6 +7,8 @@ exports.cleanLine = function(line){
   var results = {number:null,direction:null,name:null,suffix:null,unit:null,original:null,tidyaddress:null};
 
   results.original = line;
+  line = helpers.stripUnwantedCharacters(line);
+  console.log(line);
   if (line === null || line === '' || helpers.whiteSpace(line)){
     return results;
   }
@@ -19,6 +21,8 @@ exports.cleanLine = function(line){
   if(sfxSubObjs.length === 0){return results;}
   var sfxSubObj = sfxSubObjs[0];
   results.suffix = sfxSubObj.replace;
+
+  console.log(sfxSubObj);
 
   var sfxLeftInclusive = false;
   var sfxRightInclusive = false;
@@ -47,6 +51,7 @@ exports.cleanLine = function(line){
     dirSubObj = dirSubObjs[0];
     results.direction = dirSubObj.replace;
   }
+
   var name = null;
   var unit = null;
   if(dirSubObj !== null && helpers.subObjLeftOfSubObj(dirSubObj,sfxSubObj)){
@@ -61,6 +66,7 @@ exports.cleanLine = function(line){
     name = helpers.subStringBetweenSubObjs(line,numSubObj,sfxSubObj,sfxLeftInclusive,sfxRightInclusive);
     unit = helpers.subStringRightOfSubObj(line,sfxSubObj);
   }
+  name = helpers.reduceReplaceOnly(name,subs.name.replace_only);
   name = helpers.stripString(name);
   name = name.toLowerCase();
   if (unit === ''){

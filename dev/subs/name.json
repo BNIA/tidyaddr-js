@@ -1,6 +1,7 @@
 {
     "ignore":[],
-    "sub":[
+    "sub":[],
+    "replace_only":[
       {
         "match": "\\bthe alameda\\b",
         "replace": "the alameda",
@@ -9,6 +10,26 @@
       {
         "match": "\\bbroadway\\b",
         "replace": "broadway",
+        "opts": {"flags":"gi"}
+      },
+      {
+        "match": "\\bponte villas n\\b",
+        "replace": "ponte villas north",
+        "opts": {"flags":"gi"}
+      },
+      {
+        "match": "\\bponte villas s\\b",
+        "replace": "ponte villas south",
+        "opts": {"flags":"gi"}
+      },
+      {
+        "match": "\\bponte villas north\\b",
+        "replace": "ponte villas north",
+        "opts": {"flags":"gi"}
+      },
+      {
+        "match": "\\bponte villas south\\b",
+        "replace": "ponte villas south",
         "opts": {"flags":"gi"}
       }
     ]

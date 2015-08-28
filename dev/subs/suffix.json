@@ -4,12 +4,42 @@
   ],
   "sub": [
     {
+      "match": ["(?i)(?=\\bold town mall)","\\b"],
+      "replace": null,
+      "opts": {"flags":"gi","lookbehind":true}
+    },
+    {
+      "match": ["(?i)(?=\\bthe strand)","\\b"],
+      "replace": null,
+      "opts": {"flags":"gi","lookbehind":true}
+    },
+    {
       "match": ["(?i)(?=\\bthe alameda)","\\b"],
       "replace": null,
       "opts": {"flags":"gi","lookbehind":true}
     },
     {
       "match": ["(?i)(?=\\S+way)","\\b"],
+      "replace": null,
+      "opts": {"flags":"gi","lookbehind":true}
+    },
+    {
+      "match": ["(?i)(?=\\bponte villas n)","\\b"],
+      "replace": null,
+      "opts": {"flags":"gi","lookbehind":true}
+    },
+    {
+      "match": ["(?i)(?=\\bponte villas s)","\\b"],
+      "replace": null,
+      "opts": {"flags":"gi","lookbehind":true}
+    },
+    {
+      "match": ["(?i)(?=\\bponte villas north)","\\b"],
+      "replace": null,
+      "opts": {"flags":"gi","lookbehind":true}
+    },
+    {
+      "match": ["(?i)(?=\\bponte villas south)","\\b"],
       "replace": null,
       "opts": {"flags":"gi","lookbehind":true}
     },
@@ -41,6 +71,21 @@
     {
       "match": "\\bav\\b",
       "replace": "avenue",
+      "opts": {"flags":"gi"}
+    },
+    {
+      "match": "\\bav\\b",
+      "replace": "avnue",
+      "opts": {"flags":"gi"}
+    },
+    {
+      "match": "\\bav\\b",
+      "replace": "avwnue",
+      "opts": {"flags":"gi"}
+    },
+    {
+      "match": "\\bav\\b",
+      "replace": "avsnue",
       "opts": {"flags":"gi"}
     },
     {
@@ -986,6 +1031,11 @@
     {
       "match": "\\bstreet\\b",
       "replace": "street",
+      "opts": {"flags":"gi"}
+    },
+    {
+      "match": "\\bterace\\b",
+      "replace": "terrace",
       "opts": {"flags":"gi"}
     },
     {

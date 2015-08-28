@@ -25,6 +25,16 @@ var replaceBetween = function(str,replaceStr,start,end){
     return left + replaceStr + right;
 };
 
+exports.stripUnwantedCharacters = function(str){
+  if(str === null){return null;}
+  return str.replace('.',' ')
+    .replace('\'',' ')
+    .replace('"',' ')
+    .replace('_',' ')
+    .replace('#',' ')
+    .replace('`',' ')
+}
+
 exports.whiteSpace = function(str){
   return XRegExp.test(str,/^\s*$/);
 };
@@ -79,6 +89,15 @@ exports.mapSub = function(line, sub){
     });
     var flattened = _.flattenDeep(mapped);
     return _.uniq(flattened);
+};
+
+exports.reduceReplaceOnly = function(line, replaceOnly){
+  var replace = _.reduce(replaceOnly,function(finalStr,r){
+    var re = new RegExp(r.match,r.opts.flags);
+    finalStr = finalStr.replace(re,r.replace);
+    return finalStr;
+  },line);
+  return replace;
 };
 
 exports.removeIgnoredSubObjs = function(subObjs,ignores){
