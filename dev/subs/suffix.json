@@ -1092,7 +1092,7 @@
       "match": "\\bwalk\\b",
       "replace": "walk",
       "opts": {"flags":"gi"}
-    }
+    },
     {
       "match": "\\bpth\\b",
       "replace": "path",
