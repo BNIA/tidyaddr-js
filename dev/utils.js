@@ -8,7 +8,6 @@ exports.cleanLine = function(line){
 
   results.original = line;
   line = helpers.stripUnwantedCharacters(line);
-  console.log(line);
   if (line === null || line === '' || helpers.whiteSpace(line)){
     return results;
   }
@@ -22,7 +21,6 @@ exports.cleanLine = function(line){
   var sfxSubObj = sfxSubObjs[0];
   results.suffix = sfxSubObj.replace;
 
-  console.log(sfxSubObj);
 
   var sfxLeftInclusive = false;
   var sfxRightInclusive = false;
