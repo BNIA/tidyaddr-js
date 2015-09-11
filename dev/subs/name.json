@@ -1,36 +1,706 @@
 {
-    "ignore":[],
-    "sub":[],
-    "replace_only":[
-      {
-        "match": "\\bthe alameda\\b",
-        "replace": "the alameda",
-        "opts": {"flags":"gi"}
-      },
-      {
-        "match": "\\bbroadway\\b",
-        "replace": "broadway",
-        "opts": {"flags":"gi"}
-      },
-      {
-        "match": "\\bponte villas n\\b",
-        "replace": "ponte villas north",
-        "opts": {"flags":"gi"}
-      },
-      {
-        "match": "\\bponte villas s\\b",
-        "replace": "ponte villas south",
-        "opts": {"flags":"gi"}
-      },
-      {
-        "match": "\\bponte villas north\\b",
-        "replace": "ponte villas north",
-        "opts": {"flags":"gi"}
-      },
-      {
-        "match": "\\bponte villas south\\b",
-        "replace": "ponte villas south",
-        "opts": {"flags":"gi"}
+  "ignore": [],
+  "sub": [],
+  "replace_only": [
+    {
+      "match": "\\btenth\\b",
+      "replace": "10th",
+      "opts": {
+        "flags": "gi"
       }
-    ]
+    },
+    {
+      "match": "\\beleventh\\b",
+      "replace": "11th",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\btwelfth\\b",
+      "replace": "12th",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bthirteenth\\b",
+      "replace": "13th",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bfourteenth\\b",
+      "replace": "14th",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bfifteenth\\b",
+      "replace": "15th",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bsixteenth\\b",
+      "replace": "16th",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bseventeenth\\b",
+      "replace": "17th",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\beighteenth\\b",
+      "replace": "18th",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bnineteenth\\b",
+      "replace": "19th",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\btwentieth\\b",
+      "replace": "20th",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\btwenty-*first\\b",
+      "replace": "21st",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\btwenty-*second\\b",
+      "replace": "22nd",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\btwenty-*third\\b",
+      "replace": "23rd",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\btwenty-*fourth\\b",
+      "replace": "24th",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\btwenty-*fifth\\b",
+      "replace": "25th",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\btwenty-*sixth\\b",
+      "replace": "26th",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\btwenty-*seventh\\b",
+      "replace": "27th",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\btwenty-*eighth\\b",
+      "replace": "28th",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\btwenty-*ninth\\b",
+      "replace": "29th",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bthirtieth\\b",
+      "replace": "30th",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bthirty-*first\\b",
+      "replace": "31st",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bthirty-*second\\b",
+      "replace": "32nd",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bthirty-*third\\b",
+      "replace": "33rd",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bthirty-*fourth\\b",
+      "replace": "34th",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bthirty-*fifth\\b",
+      "replace": "35th",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bthirty-*sixth\\b",
+      "replace": "36th",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bthirty-*seventh\\b",
+      "replace": "37th",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bthirty-*eighth\\b",
+      "replace": "38th",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bthirty-*ninth\\b",
+      "replace": "39th",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bfou*rtieth\\b",
+      "replace": "40th",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bfou*rty-*first\\b",
+      "replace": "41st",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bfou*rty-*second\\b",
+      "replace": "42nd",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bfou*rty-*third\\b",
+      "replace": "43rd",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bfou*rty-*fourth\\b",
+      "replace": "44th",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bfou*rty-*fifth\\b",
+      "replace": "45th",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bfou*rty-*sixth\\b",
+      "replace": "46th",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bfou*rty-*seventh\\b",
+      "replace": "47th",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bfou*rty-*eighth\\b",
+      "replace": "48th",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bfou*rty-*ninth\\b",
+      "replace": "49th",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bfiftieth\\b",
+      "replace": "50th",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bfifty-*first\\b",
+      "replace": "51st",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bfifty-*second\\b",
+      "replace": "52nd",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bfifty-*third\\b",
+      "replace": "53rd",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bfifty-*fourth\\b",
+      "replace": "54th",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bfirst\\b",
+      "replace": "1st",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bsecond\\b",
+      "replace": "2nd",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bthird\\b",
+      "replace": "3rd",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bfourth\\b",
+      "replace": "4th",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bfifth\\b",
+      "replace": "5th",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bsixth\\b",
+      "replace": "6th",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bseventh\\b",
+      "replace": "7th",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\beighth\\b",
+      "replace": "8th",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bninth\\b",
+      "replace": "9th",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\b([0-9]*1)(\\s+st\\b|\\b)",
+      "replace": "$1st",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\b([0-9]*2)(\\s+nd\\b|\\b)",
+      "replace": "$1nd",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\b([0-9]*3)(\\s+rd\\b|\\b)",
+      "replace": "$1rd",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\b([0-9]*[4-9])(\\s+th\\b|\\b)",
+      "replace": "$1th",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bthe alameda\\b",
+      "replace": "the alameda",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bbroadway\\b",
+      "replace": "broadway",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bponte villas n\\b",
+      "replace": "ponte villas north",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bponte villas s\\b",
+      "replace": "ponte villas south",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bponte villas north\\b",
+      "replace": "ponte villas north",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bponte villas south\\b",
+      "replace": "ponte villas south",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bst\\s+clair\\b",
+      "replace": "saint clair",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bst\\s+anns\\b",
+      "replace": "saint anns",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bst\\s+mary\\b",
+      "replace": "saint mary",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bst\\s+johns\\b",
+      "replace": "saint johns",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bst\\s+lo\\b",
+      "replace": "saint lo",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bst\\s+paul\\b",
+      "replace": "saint paul",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bst\\s+thomas\\b",
+      "replace": "saint thomas",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bst\\s+albans\\b",
+      "replace": "saint albans",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bst\\s+ambrose\\b",
+      "replace": "saint ambrose",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bst\\s+charles\\b",
+      "replace": "saint charles",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bst\\s+benedict\\b",
+      "replace": "saint benedict",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bst\\s+dunstans\\b",
+      "replace": "saint dunstans",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bst\\s+georges\\b",
+      "replace": "saint georges",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bst\\s+helena\\b",
+      "replace": "saint helena",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bst\\s+gemma\\b",
+      "replace": "saint gemma",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bst\\s+margaret\\b",
+      "replace": "saint margaret",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bst\\s+marks\\b",
+      "replace": "saint marks",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bst\\s+martins\\b",
+      "replace": "saint martins",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bst\\s+regis\\b",
+      "replace": "saint regis",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bst\\s+stephens\\b",
+      "replace": "saint stephens",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bst\\s+victor\\b",
+      "replace": "saint victor",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bmt\\b",
+      "replace": "mount",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bmount\\b",
+      "replace": "mount",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bmnt\\b",
+      "replace": "mount",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bpk\\b",
+      "replace": "park",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bprk\\b",
+      "replace": "park",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bbel\\s+air\\b",
+      "replace": "belair",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bcedar\\s+croft\\b",
+      "replace": "cedarcroft",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bclairmont\\b",
+      "replace": "claremont",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bclairemont\\b",
+      "replace": "claremont",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bcoldspring\\b",
+      "replace": "cold spring",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bcrestmont\\b",
+      "replace": "cresmont",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bdr\\s+benjamin\\b",
+      "replace": "doctor benjamin",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bedmonson\\b",
+      "replace": "ednmondson",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bsargent\\b",
+      "replace": "sargeant",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bwolf\\b",
+      "replace": "wolfe",
+      "opts": {
+        "flags": "gi"
+      }
+    }
+  ]
 }

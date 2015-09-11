@@ -1,1187 +1,1148 @@
 {
   "ignore": [
-    "(?<=\\b[0-9]+ +)st\\b"
+    {
+      "match": "st(?=\\s+(clair|anns|mary|johns|lo|paul|thomas|albans|ambrose|charles|benedict|dunstans|georges|helena|gemma|margaret|marks|martins|regis|stephens|victor))\\b",
+      "replace": "st",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": [
+        "(?<=\\b[0-9]*3\\s+)",
+        "rd\\b"
+      ],
+      "replace": "rd",
+      "opts": {
+        "flags": "gi",
+        "lookbehind": true
+      }
+    }
   ],
   "sub": [
     {
-      "match": ["(?i)(?=\\bold town mall)","\\b"],
+      "match": [
+        "(?i)(?=\\bold town mall)",
+        "\\b"
+      ],
       "replace": null,
-      "opts": {"flags":"gi","lookbehind":true}
+      "opts": {
+        "flags": "gi",
+        "lookbehind": true
+      }
     },
     {
-      "match": ["(?i)(?=\\bthe strand)","\\b"],
+      "match": [
+        "(?i)(?=\\bthe strand)",
+        "\\b"
+      ],
       "replace": null,
-      "opts": {"flags":"gi","lookbehind":true}
+      "opts": {
+        "flags": "gi",
+        "lookbehind": true
+      }
     },
     {
-      "match": ["(?i)(?=\\bthe alameda)","\\b"],
+      "match": [
+        "(?i)(?=\\bthe alameda)",
+        "\\b"
+      ],
       "replace": null,
-      "opts": {"flags":"gi","lookbehind":true}
+      "opts": {
+        "flags": "gi",
+        "lookbehind": true
+      }
     },
     {
-      "match": ["(?i)(?=\\S+way)","\\b"],
+      "match": [
+        "(?i)(?=\\S+way)",
+        "\\b"
+      ],
       "replace": null,
-      "opts": {"flags":"gi","lookbehind":true}
+      "opts": {
+        "flags": "gi",
+        "lookbehind": true
+      }
     },
     {
-      "match": ["(?i)(?=\\bponte villas n)","\\b"],
+      "match": [
+        "(?i)(?=\\bponte villas n)",
+        "\\b"
+      ],
       "replace": null,
-      "opts": {"flags":"gi","lookbehind":true}
+      "opts": {
+        "flags": "gi",
+        "lookbehind": true
+      }
     },
     {
-      "match": ["(?i)(?=\\bponte villas s)","\\b"],
+      "match": [
+        "(?i)(?=\\bponte villas s)",
+        "\\b"
+      ],
       "replace": null,
-      "opts": {"flags":"gi","lookbehind":true}
+      "opts": {
+        "flags": "gi",
+        "lookbehind": true
+      }
     },
     {
-      "match": ["(?i)(?=\\bponte villas north)","\\b"],
+      "match": [
+        "(?i)(?=\\bponte villas north)",
+        "\\b"
+      ],
       "replace": null,
-      "opts": {"flags":"gi","lookbehind":true}
+      "opts": {
+        "flags": "gi",
+        "lookbehind": true
+      }
     },
     {
-      "match": ["(?i)(?=\\bponte villas south)","\\b"],
+      "match": [
+        "(?i)(?=\\bponte villas south)",
+        "\\b"
+      ],
       "replace": null,
-      "opts": {"flags":"gi","lookbehind":true}
+      "opts": {
+        "flags": "gi",
+        "lookbehind": true
+      }
     },
     {
       "match": "\\bal\\b",
       "replace": "alley",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\baly\\b",
       "replace": "alley",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\balley\\b",
       "replace": "alley",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\balley\\b",
-      "replace": "alley",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\balley\\b",
-      "replace": "alley",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bav\\b",
       "replace": "avenue",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bav\\b",
-      "replace": "avnue",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bav\\b",
-      "replace": "avwnue",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bav\\b",
-      "replace": "avsnue",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bave\\b",
       "replace": "avenue",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\baven\\b",
       "replace": "avenue",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bavenu\\b",
       "replace": "avenue",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bavenue\\b",
       "replace": "avenue",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bavenue\\b",
-      "replace": "avenue",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bavenue\\b",
-      "replace": "avenue",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bblvd\\b",
       "replace": "boulevard",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bboul\\b",
       "replace": "boulevard",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bblv\\b",
       "replace": "boulevard",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bboulv\\b",
       "replace": "boulevard",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bblvrd\\b",
       "replace": "boulevard",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bboulevard\\b",
       "replace": "boulevard",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bboulevard\\b",
-      "replace": "boulevard",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bboulevard\\b",
-      "replace": "boulevard",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bcswy\\b",
       "replace": "causeway",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bcauseway\\b",
       "replace": "causeway",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bcauseway\\b",
-      "replace": "causeway",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bcauseway\\b",
-      "replace": "causeway",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bcen\\b",
       "replace": "center",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bctr\\b",
       "replace": "center",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bcentre\\b",
       "replace": "center",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bctr\\b",
-      "replace": "center",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bcenter\\b",
       "replace": "center",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bcenter\\b",
-      "replace": "center",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bcenter\\b",
-      "replace": "center",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bcir\\b",
       "replace": "circle",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bcrcl\\b",
       "replace": "circle",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bcirc\\b",
       "replace": "circle",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bcrcl\\b",
-      "replace": "circle",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bcircl\\b",
       "replace": "circle",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bcircle\\b",
       "replace": "circle",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bcircle\\b",
-      "replace": "circle",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bcircle\\b",
-      "replace": "circle",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bcorners\\b",
       "replace": "corner",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bcor\\b",
       "replace": "corner",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bcrnr\\b",
       "replace": "corner",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bcorner\\b",
       "replace": "corner",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bcorner\\b",
-      "replace": "corner",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bcorner\\b",
-      "replace": "corner",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bcourts\\b",
       "replace": "court",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bcrt\\b",
       "replace": "court",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bct\\b",
       "replace": "court",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bcts\\b",
       "replace": "court",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bcourt\\b",
       "replace": "court",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bcourt\\b",
-      "replace": "court",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bcourt\\b",
-      "replace": "court",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bcres\\b",
       "replace": "crescent",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bcrsent\\b",
       "replace": "crescent",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bcrsnt\\b",
       "replace": "crescent",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bcrescent\\b",
       "replace": "crescent",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bcrescent\\b",
-      "replace": "crescent",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bcrescent\\b",
-      "replace": "crescent",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bcross\\b",
       "replace": "crossing",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bcrssng\\b",
       "replace": "crossing",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bxing\\b",
       "replace": "crossing",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bcrossing\\b",
       "replace": "crossing",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bcrossing\\b",
-      "replace": "crossing",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bcrossing\\b",
-      "replace": "crossing",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bdr\\b",
       "replace": "drive",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bdrv\\b",
       "replace": "drive",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bdrive\\b",
       "replace": "drive",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bdrive\\b",
-      "replace": "drive",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bdrive\\b",
-      "replace": "drive",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bdwy\\b",
       "replace": "driveway",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bdrwy\\b",
       "replace": "driveway",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bdy\\b",
       "replace": "driveway",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bdriveway\\b",
       "replace": "driveway",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
-      "match": "\\bdriveway\\b",
+      "match": "\\bdrive\\s+way\\b",
       "replace": "driveway",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bdriveway\\b",
-      "replace": "driveway",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bestates\\b",
       "replace": "estate",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\best\\b",
       "replace": "estate",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bests\\b",
       "replace": "estate",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bestate\\b",
       "replace": "estate",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bestate\\b",
-      "replace": "estate",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bestate\\b",
-      "replace": "estate",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bexp\\b",
       "replace": "expressway",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bexpr\\b",
       "replace": "expressway",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bexpress\\b",
       "replace": "expressway",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bexprs\\b",
       "replace": "expressway",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bexpw\\b",
       "replace": "expressway",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bexpy\\b",
       "replace": "expressway",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bexpressway\\b",
       "replace": "expressway",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bexpressway\\b",
-      "replace": "expressway",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bexpressway\\b",
-      "replace": "expressway",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bext\\b",
       "replace": "extension",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bextn\\b",
       "replace": "extension",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bextensions\\b",
       "replace": "extension",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bexts\\b",
       "replace": "extension",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bextension\\b",
       "replace": "extension",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bextension\\b",
-      "replace": "extension",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bextension\\b",
-      "replace": "extension",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bfrwy\\b",
       "replace": "freeway",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bfwy\\b",
       "replace": "freeway",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bfreewy\\b",
       "replace": "freeway",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bfreeway\\b",
       "replace": "freeway",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bfreeway\\b",
-      "replace": "freeway",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bfreeway\\b",
-      "replace": "freeway",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bgln\\b",
       "replace": "glen",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bglen\\b",
       "replace": "glen",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bglen\\b",
-      "replace": "glen",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bglen\\b",
-      "replace": "glen",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bht\\b",
       "replace": "heights",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bhts\\b",
       "replace": "heights",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bhgt\\b",
       "replace": "heights",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bhgts\\b",
       "replace": "heights",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bheights\\b",
       "replace": "heights",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bheights\\b",
-      "replace": "heights",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bheights\\b",
-      "replace": "heights",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bhighwy\\b",
       "replace": "highway",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bhiway\\b",
       "replace": "highway",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bhiwy\\b",
       "replace": "highway",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bhwy\\b",
       "replace": "highway",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bhighway\\b",
       "replace": "highway",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bhighway\\b",
-      "replace": "highway",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bhighway\\b",
-      "replace": "highway",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bknl\\b",
       "replace": "knoll",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bknol\\b",
       "replace": "knoll",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bknoll\\b",
       "replace": "knoll",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bknoll\\b",
-      "replace": "knoll",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bknoll\\b",
-      "replace": "knoll",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bknls\\b",
       "replace": "knolls",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bknolls\\b",
       "replace": "knolls",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bknolls\\b",
-      "replace": "knolls",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bknolls\\b",
-      "replace": "knolls",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\blndg\\b",
       "replace": "landing",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\blndng\\b",
       "replace": "landing",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\blanding\\b",
       "replace": "landing",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\blanding\\b",
-      "replace": "landing",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\blanding\\b",
-      "replace": "landing",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bln\\b",
       "replace": "lane",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bla\\b",
       "replace": "lane",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\blane\\b",
       "replace": "lane",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\blane\\b",
-      "replace": "lane",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\blane\\b",
-      "replace": "lane",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\blp\\b",
       "replace": "loop",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bloop\\b",
       "replace": "loop",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bloop\\b",
-      "replace": "loop",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bloop\\b",
-      "replace": "loop",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bpkway\\b",
       "replace": "parkway",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bparkwy\\b",
       "replace": "parkway",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bpkwy\\b",
       "replace": "parkway",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bpky\\b",
       "replace": "parkway",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bprkway\\b",
       "replace": "parkway",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bprkwy\\b",
       "replace": "parkway",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bparkway\\b",
       "replace": "parkway",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bparkway\\b",
-      "replace": "parkway",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bparkway\\b",
-      "replace": "parkway",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bps\\b",
       "replace": "pass",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bpass\\b",
       "replace": "pass",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bpass\\b",
-      "replace": "pass",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bpass\\b",
-      "replace": "pass",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bpk\\b",
       "replace": "pike",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bpike\\b",
       "replace": "pike",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bpike\\b",
-      "replace": "pike",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bpike\\b",
-      "replace": "pike",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bpc\\b",
       "replace": "place",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bpl\\b",
       "replace": "place",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bplace\\b",
       "replace": "place",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bplace\\b",
-      "replace": "place",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bplace\\b",
-      "replace": "place",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bplz\\b",
       "replace": "plaza",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bplza\\b",
       "replace": "plaza",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bplaza\\b",
       "replace": "plaza",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bplaza\\b",
-      "replace": "plaza",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bplaza\\b",
-      "replace": "plaza",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bpt\\b",
       "replace": "point",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bpoint\\b",
       "replace": "point",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bpoint\\b",
-      "replace": "point",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bpoint\\b",
-      "replace": "point",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\brd\\b",
       "replace": "road",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\broad\\b",
       "replace": "road",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\broad\\b",
-      "replace": "road",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\broad\\b",
-      "replace": "road",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\brt\\b",
       "replace": "route",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\brte\\b",
       "replace": "route",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\broute\\b",
       "replace": "route",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\broute\\b",
-      "replace": "route",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\broute\\b",
-      "replace": "route",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bsq\\b",
       "replace": "square",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bsqr\\b",
       "replace": "square",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bsquare\\b",
       "replace": "square",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bsquare\\b",
-      "replace": "square",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bsquare\\b",
-      "replace": "square",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bst\\b",
       "replace": "street",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bstr\\b",
       "replace": "street",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bstreet\\b",
       "replace": "street",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bstree\\b",
       "replace": "street",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bstreet\\b",
-      "replace": "street",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bstreet\\b",
-      "replace": "street",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bterace\\b",
       "replace": "terrace",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bter\\b",
       "replace": "terrace",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bterr\\b",
       "replace": "terrace",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bterrace\\b",
       "replace": "terrace",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bterrace\\b",
-      "replace": "terrace",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bterrace\\b",
-      "replace": "terrace",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bthru\\b",
       "replace": "throughway",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bthrway\\b",
       "replace": "throughway",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bthrwy\\b",
       "replace": "throughway",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bthroughway\\b",
       "replace": "throughway",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bthroughway\\b",
-      "replace": "throughway",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bthroughway\\b",
-      "replace": "throughway",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\btrl\\b",
       "replace": "trail",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\btrail\\b",
       "replace": "trail",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\btrail\\b",
-      "replace": "trail",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\btrail\\b",
-      "replace": "trail",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bwy\\b",
       "replace": "way",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bway\\b",
       "replace": "way",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bway\\b",
-      "replace": "way",
-      "opts": {"flags":"gi"}
-    },
-    {
-      "match": "\\bway\\b",
-      "replace": "way",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bwlk\\b",
       "replace": "walk",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bwalk\\b",
       "replace": "walk",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bpth\\b",
       "replace": "path",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bpath\\b",
       "replace": "path",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bmews\\b",
       "replace": "mews",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bhill\\b",
       "replace": "hill",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bhl\\b",
       "replace": "hill",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\brow\\b",
       "replace": "row",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\bgarth\\b",
       "replace": "garth",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     },
     {
       "match": "\\braod\\b",
       "replace": "road",
-      "opts": {"flags":"gi"}
+      "opts": {
+        "flags": "gi"
+      }
     }
   ]
 }

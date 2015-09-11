@@ -5,6 +5,7 @@ _.merge(XRegExp, require('xregexp-lookbehind'));
 
 var getSubObj = function(match,matchStr,replaceStr){
     var subObj = {};
+    console.log(match);
     subObj.found = match[0];
     subObj.start = match.index;
     subObj.len = subObj.found.length;
@@ -101,6 +102,7 @@ exports.reduceReplaceOnly = function(line, replaceOnly){
 };
 
 exports.removeIgnoredSubObjs = function(subObjs,ignores){
+  console.log("subObjs");
     return _.filter(subObjs,function(s){
       return !_.some(ignores,{found:s.found,start:s.start,end:s.end});
     });
