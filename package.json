@@ -1,7 +1,6 @@
 {
   "name": "tidyaddr-js",
-  "version": "1.0\
-  .0",
+  "version": "0.1.1",
   "description": "tidyaddr implementation in js. Clean (Baltimore) addresses. Connect with postgres, csv.",
   "main": "dev/index.js",
   "scripts": {
