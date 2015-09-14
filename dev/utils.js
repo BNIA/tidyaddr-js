@@ -30,11 +30,13 @@ exports.cleanLine = function(line){
 
   //number
   var numSubObjs = helpers.mapSub(line, subs.number.sub);
+  console.log(numSubObjs);
   numSubObjs = helpers.filterLeftmostLeftIndex(numSubObjs);
   numSubObjs = helpers.filterLongest(numSubObjs);
   if(numSubObjs.length === 0){return results;}
   var numSubObj = numSubObjs[0];
   results.number = numSubObj.replace;
+  results.number = helpers.reduceReplaceOnly(results.number,subs.number.replace_only);
 
   //direction
   var dirSubObjs = helpers.mapSub(line, subs.direction.sub);

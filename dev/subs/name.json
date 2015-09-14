@@ -3,6 +3,13 @@
   "sub": [],
   "replace_only": [
     {
+      "match": "\\b7\\s+mile\\b",
+      "replace": "seven mile",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
       "match": "\\btenth\\b",
       "replace": "10th",
       "opts": {
@@ -698,6 +705,27 @@
     {
       "match": "\\bwolf\\b",
       "replace": "wolfe",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+    {
+      "match": "\\bcallender\\b",
+      "replace": "calendar",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+        {
+      "match": "\\bcalendar\\b",
+      "replace": "calendar",
+      "opts": {
+        "flags": "gi"
+      }
+    },
+            {
+      "match": "\\bblue\\s+ridge\\b",
+      "replace": "blueridge",
       "opts": {
         "flags": "gi"
       }

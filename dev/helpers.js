@@ -5,7 +5,6 @@ _.merge(XRegExp, require('xregexp-lookbehind'));
 
 var getSubObj = function(match,matchStr,replaceStr){
     var subObj = {};
-    console.log(match);
     subObj.found = match[0];
     subObj.start = match.index;
     subObj.len = subObj.found.length;

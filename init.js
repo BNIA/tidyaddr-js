@@ -1,0 +1,1 @@
+global.tidyaddr = require('./dev/index.js');
