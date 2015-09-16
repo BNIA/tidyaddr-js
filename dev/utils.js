@@ -30,7 +30,6 @@ exports.cleanLine = function(line){
 
   //number
   var numSubObjs = helpers.mapSub(line, subs.number.sub);
-  console.log(numSubObjs);
   numSubObjs = helpers.filterLeftmostLeftIndex(numSubObjs);
   numSubObjs = helpers.filterLongest(numSubObjs);
   if(numSubObjs.length === 0){return results;}
@@ -83,6 +82,12 @@ exports.cleanLine = function(line){
   results.tidyaddress = tidyaddress;
   return results;
 
+};
+
+exports.cleanLines = function(lines){
+  return _.map(lines, function(line){
+    return exports.cleanLine(line);
+  });
 };
 
 exports.cleanLot = function(str){

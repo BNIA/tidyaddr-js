@@ -2,6 +2,34 @@ var _ = require('lodash');
 var Promise = require('bluebird');
 var XRegExp = require('xregexp').XRegExp;
 _.merge(XRegExp, require('xregexp-lookbehind'));
+var fs = Promise.promisifyAll(require("fs"));
+var parse= Promise.promisify(require('csv-parse'));
+var toCsv = Promise.promisify(require('json2csv'));
+
+
+exports.readCsv = function(csvPath){
+  var file = fs.readFileSync(csvPath,'utf8');
+  var headerKeys;
+  var opts = {trim:true, columns:function(header){
+    headerKeys = header;
+  }};
+  return parse(file, opts)
+    .then(function(rows){
+      return _.map(rows,function(r){
+        return _.reduce(_.range(r.length),function(obj,i){
+          obj[headerKeys[i]] = r[i];
+          return obj;
+        },{});
+      });
+    });
+};
+
+exports.writeCsv = function(rows,csvPath){
+  var fields = _.keys(rows[0]);
+  return toCsv({data:rows,fields:fields,del:';'}).then(function(csv){
+    return fs.writeFileAsync(csvPath,csv);
+  });
+};
 
 var getSubObj = function(match,matchStr,replaceStr){
     var subObj = {};
@@ -101,7 +129,6 @@ exports.reduceReplaceOnly = function(line, replaceOnly){
 };
 
 exports.removeIgnoredSubObjs = function(subObjs,ignores){
-  console.log("subObjs");
     return _.filter(subObjs,function(s){
       return !_.some(ignores,{found:s.found,start:s.start,end:s.end});
     });

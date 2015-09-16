@@ -26,8 +26,9 @@
   },
   "dependencies": {
     "bluebird": "~2.9.34",
-    "lodash": "~3.10.1",
+    "json2csv": "^2.11.0",
     "knex": "~0.8.6",
+    "lodash": "~3.10.1",
     "xregexp": "~2.0.0",
     "xregexp-lookbehind": "~1.0.0"
   },
