@@ -1,6 +1,6 @@
 {
   "name": "tidyaddr-js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "tidyaddr implementation in js. Clean (Baltimore) addresses. Connect with postgres, csv.",
   "main": "dev/index.js",
   "scripts": {
@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "bluebird": "~2.9.34",
+    "csv-parse": "1.0.1",
     "json2csv": "^2.11.0",
     "knex": "~0.8.6",
     "lodash": "~3.10.1",
