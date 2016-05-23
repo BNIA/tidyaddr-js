@@ -9,5 +9,5 @@ type "npm install" into the terminal/cmd.exe.
 
 # Usage 
 Make sure your csv has only one column, which should be named "address". 
-type into the command line: "node tidyaddr.js clean-csv <your-input-file> <your-output-file>". 
+type into the command line: "node tidyaddr.js clean-csv \<your-input-file\> \<your-output-file\>". 
 It will say "done" when finished.
