@@ -4,7 +4,7 @@ var subs = require('./subs.js');
 var helpers = require('./helpers.js');
 
 exports.cleanLine = function(line){
-  var results = {number:null,direction:null,name:null,suffix:null,unit:null,original:null,tidyaddress:null,flag:"success"};
+  var results = {number:null,direction:null,name:null,suffix:null,unit:null,original:null,tidyaddress:null,flag:1};
 
   results.original = line;
   line = helpers.stripUnwantedCharacters(line);
@@ -19,7 +19,7 @@ exports.cleanLine = function(line){
   sfxSubObjs = helpers.filterLongest(sfxSubObjs);
   if(sfxSubObjs.length === 0){
     results.tidyaddress = results.original;
-    results.flag = "failed";
+    results.flag = 0;
     return results;
   }
   var sfxSubObj = sfxSubObjs[0];
