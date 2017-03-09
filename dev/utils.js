@@ -4,7 +4,7 @@ var subs = require('./subs.js');
 var helpers = require('./helpers.js');
 
 exports.cleanLine = function(line){
-  var results = {number:null,direction:null,name:null,suffix:null,unit:null,original:null,tidyaddress:null};
+  var results = {number:null,direction:null,name:null,suffix:null,unit:null,original:null,tidyaddress:null,flag:"success"};
 
   results.original = line;
   line = helpers.stripUnwantedCharacters(line);
@@ -17,7 +17,11 @@ exports.cleanLine = function(line){
   sfxSubObjs = helpers.removeIgnoredSubObjs(sfxSubObjs,sfxIgnoreObjs);
   sfxSubObjs = helpers.filterRightmostLeftIndex(sfxSubObjs);
   sfxSubObjs = helpers.filterLongest(sfxSubObjs);
-  if(sfxSubObjs.length === 0){return results;}
+  if(sfxSubObjs.length === 0){
+    results.tidyaddress = results.original;
+    results.flag = "failed";
+    return results;
+  }
   var sfxSubObj = sfxSubObjs[0];
   results.suffix = sfxSubObj.replace;
 
@@ -79,6 +83,7 @@ exports.cleanLine = function(line){
   results.unit = unit;
 
   var tidyaddress = helpers.cleanConcat([results.number,results.direction,results.name,results.suffix]);
+  // console.log(tidyaddress)
   results.tidyaddress = tidyaddress;
   return results;
 
