@@ -17,6 +17,7 @@ exports.cleanLine = function(line){
   sfxSubObjs = helpers.removeIgnoredSubObjs(sfxSubObjs,sfxIgnoreObjs);
   sfxSubObjs = helpers.filterRightmostLeftIndex(sfxSubObjs);
   sfxSubObjs = helpers.filterLongest(sfxSubObjs);
+  console.log(sfxSubObjs);
   if(sfxSubObjs.length === 0){
     results.tidyaddress = results.original;
     results.flag = 0;
@@ -36,7 +37,10 @@ exports.cleanLine = function(line){
   var numSubObjs = helpers.mapSub(line, subs.number.sub);
   numSubObjs = helpers.filterLeftmostLeftIndex(numSubObjs);
   numSubObjs = helpers.filterLongest(numSubObjs);
-  if(numSubObjs.length === 0){return results;}
+  if(numSubObjs.length === 0){
+    results.flag = 0;
+    return results;
+  }
   var numSubObj = numSubObjs[0];
   results.number = numSubObj.replace;
   results.number = helpers.reduceReplaceOnly(results.number,subs.number.replace_only);
@@ -83,7 +87,6 @@ exports.cleanLine = function(line){
   results.unit = unit;
 
   var tidyaddress = helpers.cleanConcat([results.number,results.direction,results.name,results.suffix]);
-  // console.log(tidyaddress)
   results.tidyaddress = tidyaddress;
   return results;
 
