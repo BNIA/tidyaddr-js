@@ -11,9 +11,12 @@ if(arguments[0] === "clean-csv"){
 		process.exit(0);
 	}
 	else{
-		helpers.readCsv(infile).then(function(lines){
-			lines = _.pluck(lines,"address");
-			return tidyaddr.cleanLines(lines);
+		helpers.readCsv(infile).then(function(csv_records){
+			// Reads in the CSV as an Object Array
+			var addresses = _.pluck(csv_records,"address");
+			var cleaned = tidyaddr.cleanLines(addresses);
+			var a = fullJoin(csv_records, cleaned);
+			return a;
 		})
 		.then(function(results){
 			return helpers.writeCsv(results,outfile);
@@ -22,4 +25,27 @@ if(arguments[0] === "clean-csv"){
 			console.log("DONE");
 		})
 	}
+}
+
+function fullJoin(a, b) {
+  var r = [];
+  a.forEach(function (a) {
+    var found = false;
+    b.forEach(function (b) {
+      if (a.address === b.original) {
+        var j = Object.assign(a, b);
+        r.push(j);
+        found = true;
+      }
+    })
+    if (!found) r.push(a);
+  });
+  b.forEach(function (b) {
+    var found = false;
+    a.forEach(function (a) {
+       if (a.address === b.original) found = true;
+    });
+    if (!found) r.push(b);
+  });
+  return r;
 }
