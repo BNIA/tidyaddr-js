@@ -15,8 +15,19 @@ if(arguments[0] === "clean-csv"){
 			// Reads in the CSV as an Object Array
 			var addresses = _.pluck(csv_records,"address");
 			var cleaned = tidyaddr.cleanLines(addresses);
-			var a = fullJoin(csv_records, cleaned);
-			return a;
+			// var a = fullJoin(csv_records, cleaned);
+			
+			let arr3 = [];
+			console.log( 'STARTING ' )
+			csv_records.forEach((itm, i) => {
+			  let temp = Object.assign({}, itm, cleaned[i] )
+			  Object.keys(temp).forEach((key, i) => { console.log('key', key), temp[key] = temp[key] ? JSON.stringify(temp[key]).replace(",", "").replace(",", "") : temp[key] } );	
+			  arr3.push(temp);
+			});
+
+			console.log(arr3)
+			
+			return arr3;
 		})
 		.then(function(results){
 			return helpers.writeCsv(results,outfile);
@@ -25,27 +36,4 @@ if(arguments[0] === "clean-csv"){
 			console.log("DONE");
 		})
 	}
-}
-
-function fullJoin(a, b) {
-  var r = [];
-  a.forEach(function (a) {
-    var found = false;
-    b.forEach(function (b) {
-      if (a.address === b.original) {
-        var j = Object.assign(a, b);
-        r.push(j);
-        found = true;
-      }
-    })
-    if (!found) r.push(a);
-  });
-  b.forEach(function (b) {
-    var found = false;
-    a.forEach(function (a) {
-       if (a.address === b.original) found = true;
-    });
-    if (!found) r.push(b);
-  });
-  return r;
 }
