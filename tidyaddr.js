@@ -21,7 +21,9 @@ if(arguments[0] === "clean-csv"){
 			
 			csv_records.forEach((itm, i) => {
 			  let temp = Object.assign({}, itm, cleaned[i] )
-			  Object.keys(temp).forEach((key, i) => { temp[key] = temp[key] ? JSON.stringify(temp[key]).replace(",", "").replace(",", "") : temp[key] } );	
+			  Object.keys(temp).forEach((key, i) => { 
+			    temp[key] = temp[key] ? JSON.stringify(temp[key]).replace(",", "").replace(/"/g, "") : temp[key] 
+		      } );
 			  arr3.push(temp);
 			});
 			
